@@ -83,11 +83,11 @@ visit1 = Visit(
 visit2 = Visit(
     code=MONTH6,
     title="Month 6",
-    timepoint=1,
+    timepoint=2,
     rbase=relativedelta(months=6),
     rlower=relativedelta(days=0),
     rupper=relativedelta(days=6),
-    requisitions=requisitions_3m,
+    requisitions=requisitions_6m,
     crfs=crfs_6m,
     facility_name="7-day clinic",
 )
@@ -95,7 +95,7 @@ visit2 = Visit(
 visit3 = Visit(
     code=MONTH9,
     title="Month 9",
-    timepoint=1,
+    timepoint=3,
     rbase=relativedelta(months=9),
     rlower=relativedelta(days=0),
     rupper=relativedelta(days=6),
@@ -106,7 +106,7 @@ visit3 = Visit(
 visit4 = Visit(
     code=MONTH12,
     title="Month 12",
-    timepoint=1,
+    timepoint=4,
     rbase=relativedelta(months=12),
     rlower=relativedelta(days=0),
     rupper=relativedelta(days=6),
