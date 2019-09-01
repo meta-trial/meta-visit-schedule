@@ -51,7 +51,7 @@ schedule = Schedule(
     verbose_name="Day 1 to Month 12 Follow-up",
     onschedule_model="meta_prn.onschedule",
     offschedule_model="meta_prn.endofstudy",
-    consent_model="meta_subject.subjectconsent",
+    consent_model="meta_consent.subjectconsent",
     appointment_model="edc_appointment.appointment",
 )
 
