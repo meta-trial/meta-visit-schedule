@@ -1,0 +1,10 @@
+meta-subject
+edc-action-item
+django-crypto-fields
+edc-registration
+edc-appointment
+edc-metadata
+meta-screening
+edc-dashboard
+edc-subject-dashboard
+edc-test-utils

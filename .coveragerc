@@ -1,0 +1,4 @@
+[run]
+include = meta_visit_schedule/*
+omit = meta_visit_schedule/tests/*
+branch = 1
