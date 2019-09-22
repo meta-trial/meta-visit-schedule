@@ -1,9 +1,11 @@
 from dateutil.relativedelta import relativedelta
 from edc_visit_schedule import Schedule, Visit as BaseVisit
 
-from ..constants import DAY1, MONTH3, MONTH6, MONTH9, MONTH12
+from ..constants import DAY1, MONTH3, MONTH6, MONTH9, MONTH12, WEEK2, MONTH1
 from .crfs import (
     crfs_d1,
+    crfs_w2,
+    crfs_1m,
     crfs_3m,
     crfs_6m,
     crfs_9m,
@@ -13,6 +15,8 @@ from .crfs import (
 )
 from .requisitions import (
     requisitions_d1,
+    requisitions_w2,
+    requisitions_1m,
     requisitions_3m,
     requisitions_6m,
     requisitions_9m,
@@ -69,9 +73,34 @@ visit0 = Visit(
 )
 
 visit1 = Visit(
+    code=WEEK2,
+    title="Week 2",
+    timepoint=1,
+    rbase=relativedelta(weeks=2),
+    rlower=relativedelta(days=0),
+    rupper=relativedelta(days=4),
+    requisitions=requisitions_w2,
+    crfs=crfs_w2,
+    facility_name="7-day clinic",
+)
+
+visit2 = Visit(
+    code=MONTH1,
+    title="Month 1",
+    timepoint=2,
+    rbase=relativedelta(months=1),
+    rlower=relativedelta(days=0),
+    rupper=relativedelta(days=6),
+    requisitions=requisitions_1m,
+    crfs=crfs_1m,
+    facility_name="7-day clinic",
+)
+
+
+visit3 = Visit(
     code=MONTH3,
     title="Month 3",
-    timepoint=1,
+    timepoint=3,
     rbase=relativedelta(months=3),
     rlower=relativedelta(days=0),
     rupper=relativedelta(days=6),
@@ -80,10 +109,10 @@ visit1 = Visit(
     facility_name="7-day clinic",
 )
 
-visit2 = Visit(
+visit4 = Visit(
     code=MONTH6,
     title="Month 6",
-    timepoint=2,
+    timepoint=4,
     rbase=relativedelta(months=6),
     rlower=relativedelta(days=0),
     rupper=relativedelta(days=6),
@@ -92,10 +121,10 @@ visit2 = Visit(
     facility_name="7-day clinic",
 )
 
-visit3 = Visit(
+visit5 = Visit(
     code=MONTH9,
     title="Month 9",
-    timepoint=3,
+    timepoint=5,
     rbase=relativedelta(months=9),
     rlower=relativedelta(days=0),
     rupper=relativedelta(days=6),
@@ -103,10 +132,10 @@ visit3 = Visit(
     crfs=crfs_9m,
     facility_name="7-day clinic",
 )
-visit4 = Visit(
+visit6 = Visit(
     code=MONTH12,
     title="Month 12",
-    timepoint=4,
+    timepoint=6,
     rbase=relativedelta(months=12),
     rlower=relativedelta(days=0),
     rupper=relativedelta(days=6),
@@ -120,3 +149,5 @@ schedule.add_visit(visit=visit1)
 schedule.add_visit(visit=visit2)
 schedule.add_visit(visit=visit3)
 schedule.add_visit(visit=visit4)
+schedule.add_visit(visit=visit5)
+schedule.add_visit(visit=visit6)
