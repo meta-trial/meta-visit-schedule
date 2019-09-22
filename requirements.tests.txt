@@ -8,3 +8,6 @@ meta-screening
 edc-dashboard
 edc-subject-dashboard
 edc-test-utils
+meta-sites
+meta-lists
+meta-ae
