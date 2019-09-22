@@ -9,7 +9,7 @@ visit_schedule = VisitSchedule(
     name=VISIT_SCHEDULE,
     verbose_name="Meta",
     offstudy_model="edc_offstudy.subjectoffstudy",
-    death_report_model="meta_prn.deathreport",
+    death_report_model="meta_ae.deathreport",
     locator_model="edc_locator.subjectlocator",
     previous_visit_schedule=None,
 )
