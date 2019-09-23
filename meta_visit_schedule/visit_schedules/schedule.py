@@ -69,7 +69,7 @@ visit0 = Visit(
     rupper=relativedelta(days=0),
     requisitions=requisitions_d1,
     crfs=crfs_d1,
-    facility_name="7-day clinic",
+    facility_name="7-day-clinic",
 )
 
 visit1 = Visit(
@@ -81,7 +81,7 @@ visit1 = Visit(
     rupper=relativedelta(days=4),
     requisitions=requisitions_w2,
     crfs=crfs_w2,
-    facility_name="7-day clinic",
+    facility_name="7-day-clinic",
 )
 
 visit2 = Visit(
@@ -93,7 +93,7 @@ visit2 = Visit(
     rupper=relativedelta(days=6),
     requisitions=requisitions_1m,
     crfs=crfs_1m,
-    facility_name="7-day clinic",
+    facility_name="7-day-clinic",
 )
 
 
@@ -106,7 +106,7 @@ visit3 = Visit(
     rupper=relativedelta(days=6),
     requisitions=requisitions_3m,
     crfs=crfs_3m,
-    facility_name="7-day clinic",
+    facility_name="7-day-clinic",
 )
 
 visit4 = Visit(
@@ -118,7 +118,7 @@ visit4 = Visit(
     rupper=relativedelta(days=6),
     requisitions=requisitions_6m,
     crfs=crfs_6m,
-    facility_name="7-day clinic",
+    facility_name="7-day-clinic",
 )
 
 visit5 = Visit(
@@ -130,7 +130,7 @@ visit5 = Visit(
     rupper=relativedelta(days=6),
     requisitions=requisitions_9m,
     crfs=crfs_9m,
-    facility_name="7-day clinic",
+    facility_name="7-day-clinic",
 )
 visit6 = Visit(
     code=MONTH12,
@@ -141,7 +141,7 @@ visit6 = Visit(
     rupper=relativedelta(days=6),
     requisitions=requisitions_12m,
     crfs=crfs_12m,
-    facility_name="7-day clinic",
+    facility_name="7-day-clinic",
 )
 
 schedule.add_visit(visit=visit0)
