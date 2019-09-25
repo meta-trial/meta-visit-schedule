@@ -22,7 +22,8 @@ crfs_unscheduled = FormsCollection(
 
 
 crfs_d1 = FormsCollection(
-    Crf(show_order=10, model="meta_subject.followup"),
+    Crf(show_order=10, model="meta_subject.followupvitals"),
+    Crf(show_order=15, model="meta_subject.followup"),
     Crf(show_order=20, model="meta_subject.healtheconomics"),
     Crf(show_order=30, model="meta_subject.medicationadherence"),
     Crf(show_order=40, model="meta_subject.bloodresultsfbc"),
@@ -35,19 +36,22 @@ crfs_d1 = FormsCollection(
 )
 
 crfs_w2 = FormsCollection(
-    Crf(show_order=10, model="meta_subject.followup"),
+    Crf(show_order=10, model="meta_subject.followupvitals"),
+    Crf(show_order=15, model="meta_subject.followup"),
     Crf(show_order=20, model="meta_subject.medicationadherence"),
     name="week2",
 )
 
 crfs_1m = FormsCollection(
-    Crf(show_order=10, model="meta_subject.followup"),
+    Crf(show_order=10, model="meta_subject.followupvitals"),
+    Crf(show_order=15, model="meta_subject.followup"),
     Crf(show_order=20, model="meta_subject.medicationadherence"),
     name="1m",
 )
 
 crfs_3m = FormsCollection(
-    Crf(show_order=10, model="meta_subject.followup"),
+    Crf(show_order=10, model="meta_subject.followupvitals"),
+    Crf(show_order=15, model="meta_subject.followup"),
     Crf(show_order=20, model="meta_subject.medicationadherence"),
     Crf(show_order=30, model="meta_subject.bloodresultslft"),
     Crf(show_order=40, model="meta_subject.bloodresultsrft"),
@@ -55,7 +59,8 @@ crfs_3m = FormsCollection(
 )
 
 crfs_6m = FormsCollection(
-    Crf(show_order=10, model="meta_subject.followup"),
+    Crf(show_order=10, model="meta_subject.followupvitals"),
+    Crf(show_order=15, model="meta_subject.followup"),
     Crf(show_order=20, model="meta_subject.medicationadherence"),
     Crf(show_order=30, model="meta_subject.bloodresultshba1c"),
     Crf(show_order=40, model="meta_subject.bloodresultslft"),
@@ -64,7 +69,8 @@ crfs_6m = FormsCollection(
 )
 
 crfs_9m = FormsCollection(
-    Crf(show_order=10, model="meta_subject.followup"),
+    Crf(show_order=10, model="meta_subject.followupvitals"),
+    Crf(show_order=15, model="meta_subject.followup"),
     Crf(show_order=20, model="meta_subject.medicationadherence"),
     Crf(show_order=30, model="meta_subject.bloodresultslft"),
     Crf(show_order=40, model="meta_subject.bloodresultsrft"),
@@ -72,7 +78,8 @@ crfs_9m = FormsCollection(
 )
 
 crfs_12m = FormsCollection(
-    Crf(show_order=10, model="meta_subject.followup"),
+    Crf(show_order=10, model="meta_subject.followupvitals"),
+    Crf(show_order=15, model="meta_subject.followup"),
     Crf(show_order=20, model="meta_subject.medicationadherence"),
     Crf(show_order=30, model="meta_subject.bloodresultsglu"),
     Crf(show_order=40, model="meta_subject.bloodresultshba1c"),
