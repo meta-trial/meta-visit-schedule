@@ -8,7 +8,6 @@ from meta_labs import (
     hba1c_poc_panel,
 )
 
-
 requisitions_prn = FormsCollection(
     Requisition(
         show_order=10, panel=blood_glucose_panel, required=True, additional=False
@@ -24,10 +23,6 @@ requisitions_prn = FormsCollection(
 )
 
 requisitions_d1 = FormsCollection(
-    Requisition(
-        show_order=10, panel=blood_glucose_poc_panel, required=True, additional=False
-    ),
-    Requisition(show_order=20, panel=hba1c_poc_panel, required=True, additional=False),
     Requisition(show_order=30, panel=fbc_panel, required=True, additional=False),
     Requisition(show_order=40, panel=chemistry_panel, required=True, additional=False),
     name="requisitions_day1",
@@ -36,7 +31,6 @@ requisitions_d1 = FormsCollection(
 requisitions_w2 = FormsCollection(name="requisitions_week2")
 
 requisitions_1m = FormsCollection(name="requisitions_month1")
-
 
 requisitions_3m = FormsCollection(
     Requisition(show_order=10, panel=chemistry_panel, required=True, additional=False),
