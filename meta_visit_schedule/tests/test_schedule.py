@@ -7,19 +7,15 @@ from ..visit_schedules.visit_schedule import visit_schedule
 class TestVisitSchedule(TestCase):
     def test_visit_schedule_models(self):
 
-        self.assertEqual(visit_schedule.death_report_model,
-                         "meta_ae.deathreport")
-        self.assertEqual(visit_schedule.offstudy_model,
-                         "edc_offstudy.subjectoffstudy")
-        self.assertEqual(visit_schedule.locator_model,
-                         "edc_locator.subjectlocator")
+        self.assertEqual(visit_schedule.death_report_model, "meta_ae.deathreport")
+        self.assertEqual(visit_schedule.offstudy_model, "edc_offstudy.subjectoffstudy")
+        self.assertEqual(visit_schedule.locator_model, "edc_locator.subjectlocator")
 
     def test_schedule_models(self):
         self.assertEqual(schedule.onschedule_model, "meta_prn.onschedule")
         self.assertEqual(schedule.offschedule_model, "meta_prn.endofstudy")
         self.assertEqual(schedule.consent_model, "meta_consent.subjectconsent")
-        self.assertEqual(schedule.appointment_model,
-                         "edc_appointment.appointment")
+        self.assertEqual(schedule.appointment_model, "edc_appointment.appointment")
 
     def test_visit_codes(self):
         self.assertEqual(
@@ -133,5 +129,4 @@ class TestVisitSchedule(TestCase):
 
             actual = [crf.model for crf in visit.crfs_prn]
             actual.sort()
-            self.assertEqual(
-                prn, actual, msg=f"see PRN CRFs for visit {visit_code}")
+            self.assertEqual(prn, actual, msg=f"see PRN CRFs for visit {visit_code}")
