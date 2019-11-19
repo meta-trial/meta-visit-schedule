@@ -33,7 +33,7 @@ class TestVisitSchedule(TestCase):
             "hba1c_poc",
         ]
         expected = {
-            "1000": ["blood_glucose_poc", "chemistry", "fbc", "hba1c_poc"],
+            "1000": ["chemistry", "fbc"],
             "1005": [],
             "1010": [],
             "1030": ["chemistry"],
@@ -67,21 +67,28 @@ class TestVisitSchedule(TestCase):
         ]
         expected = {
             "1000": [
+                "meta_subject.physicalexam",
+                "meta_subject.patienthistory",
                 "meta_subject.bloodresultsfbc",
-                "meta_subject.bloodresultsglu",
-                "meta_subject.bloodresultshba1c",
                 "meta_subject.bloodresultslft",
                 "meta_subject.bloodresultsrft",
+                "meta_subject.urinedipsticktest",
+            ],
+            "1005": [
+                "meta_subject.followupvitals",
                 "meta_subject.followup",
                 "meta_subject.healtheconomics",
                 "meta_subject.medicationadherence",
-                "meta_subject.urinedipsticktest",
             ],
-            "1005": ["meta_subject.followup", "meta_subject.medicationadherence"],
-            "1010": ["meta_subject.followup", "meta_subject.medicationadherence"],
+            "1010": [
+                "meta_subject.followupvitals",
+                "meta_subject.followup",
+                "meta_subject.medicationadherence",
+            ],
             "1030": [
                 "meta_subject.bloodresultslft",
                 "meta_subject.bloodresultsrft",
+                "meta_subject.followupvitals",
                 "meta_subject.followup",
                 "meta_subject.medicationadherence",
             ],
@@ -89,12 +96,14 @@ class TestVisitSchedule(TestCase):
                 "meta_subject.bloodresultshba1c",
                 "meta_subject.bloodresultslft",
                 "meta_subject.bloodresultsrft",
+                "meta_subject.followupvitals",
                 "meta_subject.followup",
                 "meta_subject.medicationadherence",
             ],
             "1090": [
                 "meta_subject.bloodresultslft",
                 "meta_subject.bloodresultsrft",
+                "meta_subject.followupvitals",
                 "meta_subject.followup",
                 "meta_subject.medicationadherence",
             ],
@@ -104,6 +113,7 @@ class TestVisitSchedule(TestCase):
                 "meta_subject.bloodresultshba1c",
                 "meta_subject.bloodresultslft",
                 "meta_subject.bloodresultsrft",
+                "meta_subject.followupvitals",
                 "meta_subject.followup",
                 "meta_subject.medicationadherence",
                 "meta_subject.urinedipsticktest",
@@ -112,6 +122,7 @@ class TestVisitSchedule(TestCase):
         for visit_code, visit in schedule.visits.items():
             actual = [crf.model for crf in visit.crfs]
             actual.sort()
+            expected.get(visit_code).sort()
             self.assertEqual(
                 expected.get(visit_code), actual, msg=f"see CRFs for visit {visit_code}"
             )
